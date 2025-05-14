@@ -1,0 +1,135 @@
+/* Основные цвета приложения */
+:root {
+    --background: #1A1E26;
+    --text: #FFFFFF;
+    --accent: #3A3F4B;
+    --button: #2A2F3B;
+    --highlight: #3A3F4B;
+    --panel-bg: #232830;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.panel {
+    background-color: var(--panel-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    background-color: var(--accent);
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    text-align: center;
+}
+
+.volume-input {
+    display: flex;
+    align-items: center;
+}
+
+.volume-input span {
+    margin-left: 5px;
+}
+
+.result-group {
+    margin-top: 20px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.result-row span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.volume-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.volume-btn {
+    background-color: var(--button);
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.volume-btn:hover {
+    background-color: var(--highlight);
+}
+
+/* Мобильные стили */
+@media (max-width: 500px) {
+    .input-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    input {
+        margin-top: 5px;
+    }
+    
+    .volume-input {
+        margin-top: 5px;
+    }
+    
+    .result-row {
+        flex-direction: column;
+    }
+    
+    .result-row span {
+        margin-top: 5px;
+    }
+} 
